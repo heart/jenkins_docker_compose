@@ -6,10 +6,6 @@ services:
     ports:
       - 4000:8080 
       - 50000:50000
-    volumes_from:
-      - jenkins-data
-    depends_on: 
-      - jenkins-data
-  jenkins-data:
-    build:  ./data
-    container_name: jenkins-data
+    volumes:
+      - ./storage:/var/jenkins_home
+    
