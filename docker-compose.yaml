@@ -7,5 +7,5 @@ services:
       - 4000:8080 
       - 50000:50000
     volumes:
-      - ./storage:/var/jenkins_home
+      - ../jenkins_data:/var/jenkins_home
     
